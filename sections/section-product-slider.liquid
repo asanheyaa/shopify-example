@@ -1,0 +1,41 @@
+<div>
+
+</div>
+{{ 'slick.css' | asset_url | stylesheet_tag }}
+
+<script src="{{'jquery-4.0.0.min.js' | asset_url}}" defer="defer"></script>
+<script src="{{'slick.min.js' | asset_url}}" defer="defer"></script>
+
+{% schema %}
+  {
+    "name": "Slider products",
+
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "include_margins",
+        "label": "slider-product",
+        "default": true
+      }
+     
+    ],
+    "presets": [
+      {
+        "name": "Slider product"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Proposal product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "proposal_product",
+            "label": "Our proposal product"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
