@@ -11,6 +11,38 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "section_product_slider_EaCDn7": {
+      "type": "section-product-slider",
+      "blocks": {
+        "product_xJaJdH": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "adidas-bw-army-cooc"
+          }
+        },
+        "product_9GfX6c": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "adidas-bw-army-cooc"
+          }
+        },
+        "product_C7qB6Y": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "adidas-bw-army"
+          }
+        }
+      },
+      "block_order": [
+        "product_xJaJdH",
+        "product_9GfX6c",
+        "product_C7qB6Y"
+      ],
+      "name": "Slider product",
+      "settings": {
+        "include_margins": true
+      }
+    },
     "footer_m9NzUG": {
       "type": "footer",
       "blocks": {
@@ -115,9 +147,9 @@
             "width": "fill",
             "custom_width": 100,
             "inherit_color_scheme": true,
+            "color_scheme": "",
             "heading": "",
             "heading_preset": "h3",
-            "color_scheme": "",
             "border_style": "all",
             "border_width": 1,
             "border_radius": 100,
@@ -205,6 +237,7 @@
     }
   },
   "order": [
+    "section_product_slider_EaCDn7",
     "footer_m9NzUG",
     "footer_utilities_jLGE8U"
   ]
