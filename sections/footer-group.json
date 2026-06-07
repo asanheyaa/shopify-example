@@ -81,7 +81,9 @@
         "product_C7qB6Y"
       ],
       "name": "Slider product",
-      "settings": {}
+      "settings": {
+        "slider_items": 4
+      }
     },
     "footer_m9NzUG": {
       "type": "footer",
