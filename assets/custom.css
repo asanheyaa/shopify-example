@@ -1,0 +1,136 @@
+.slider-product-proposal {
+	padding: 50px 0;
+}
+
+.page-width {}
+
+.slider-product-proposal__container {
+	padding: 0 15px;
+
+}
+
+.slider-product-proposal__content {}
+
+.slider-product-proposal__title {
+
+	display: block;
+	width: 100%;
+	font-style: 52px;
+	line-height: 1.1;
+	text-align: center;
+}
+
+.slider-product-proposal__subtitle {
+	display: block;
+	width: 100%;
+	font-size: 24px;
+	line-height: 1.4;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.slider-product-proposal__slider {}
+
+.slider-product-proposal__list {}
+
+.slider-product-proposal__item {
+	margin-right: 30px;
+	position: relative;
+}
+
+.slider-item__link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.slider-item__link:hover+.slider-item__image img {
+	transform: scale(1.1);
+}
+
+.slider-item__image {
+	position: relative;
+	aspect-ratio: 1/1;
+	overflow: hidden;
+}
+
+.slider-item__picture {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.3s ease 0s;
+}
+
+.slider-item__title {}
+
+.slider-item__description {}
+
+.slider-item__price {}
+
+.slider-item__price span:nth-child(2) {
+	text-decoration: line-through;
+}
+
+/* slick slider start */
+.slick-slider {}
+
+.slick-slider .slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+	width: 3.125rem;
+	height: 3.125rem;
+	display: block;
+	font-size: 0;
+	background: rgb(140, 71, 61);
+	border-radius: 50%;
+	color: #fff;
+	border: none;
+	line-height: 50px;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.slick-slider .slick-arrow:hover {
+	background: rgb(140, 71, 61, .8);
+}
+
+.slick-slider .slick-arrow::before {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 24px;
+	line-height: inherit;
+	color: currentColor;
+	font-weight: bold;
+
+}
+
+.slick-slider .slick-next {
+	right: 0;
+}
+
+.slick-slider .slick-next::before {
+	content: ">";
+}
+
+.slick-slider .slick-prev {
+	left: 0;
+}
+
+.slick-slider .slick-prev::before {
+	content: "<";
+}
+
+/* slick slider end */

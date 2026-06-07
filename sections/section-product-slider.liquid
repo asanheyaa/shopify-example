@@ -11,14 +11,42 @@
       </div>
       <div class="slider-product-proposal__slider">
         <div class="slider-product-proposal__list">
-
+          {% comment %} цикл {% endcomment %}
           {% for block in section.blocks %}
+            {% comment %} створення змінної {% endcomment %}
             {% assign product = block.settings.proposal_product %}
             {% if product != blank %}
               <div class="slider-product-proposal__item">
+                <a href="{{ product.url }}" class="slider-item__link"></a>
+                <div class="slider-item__image">
+                    {% comment %} featured_image - Головне зображення {% endcomment %}
+                  <img
+                    src="{{ product.featured_image |  img_url: 'grande'}}"
+                    alt="{{ product.alt |  default:product.title}}"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    class="slider-item__picture">
+                </div>
                 <h4 class="slider-item__title">
                   {{ product.title }}
                 </h4>
+                {% if product.content != blank %}
+                  <div class="slider-item__description">
+                    {{ product.content | strip_html | truncate: 200, '...' }}
+                  </div>
+                {% endif %}
+                <div class="slider-item__price">
+                  <span>
+                    {{ product.price | money_with_currency }}
+                  </span>
+                  {% if product.compare_at_price != blank %}
+                    <span>
+                      {{ product.compare_at_price | money_with_currency }}
+                    </span>
+                  {% endif %}
+
+                </div>
               </div>
             {% endif %}
 
@@ -32,6 +60,8 @@
   </div>
 {% endif %}
 {{ 'slick.css' | asset_url | stylesheet_tag }}
+{{ 'custom.css' | asset_url | stylesheet_tag}}
+
 
 
 <script src="{{'jquery-3.7.1.min.js' | asset_url}}" defer="defer"></script>
@@ -41,7 +71,25 @@
     $('#shopify-section-{{section.id}} .slider-product-proposal__list').slick({
       infinity:true,
       slidesToShow: {{section.settings.slider_items}},
-      slidesToScroll:3
+      slidesToScroll: {{ section.settings.slider_items }},
+      speed:1000,
+      responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: {{ section.settings.slider_items_tablets }},
+        slidesToScroll: {{ section.settings.slider_items_tablets }},
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: {{ section.settings.slider_items_mobile }},
+        slidesToScroll: {{ section.settings.slider_items_mobile }}
+      }
+    }
+  ]
+      
     })
   })
 </script>
@@ -51,14 +99,31 @@
 
     "settings": [
       {
+        "type": "range",
+        "id": "slider_items",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Items per page desktop",
+        "default": 3
+      },
+      {
       "type": "range",
-      "id": "slider_items",
+      "id": "slider_items_tablets",
       "min": 1,
-      "max": 5,
+      "max": 4,
       "step": 1,
-      // "unit": "items",
-      "label": "Items per page",
-      "default":2
+      "label": "Items per page tablet",
+      "default": 2
+      },
+      {
+      "type": "range",
+      "id": "slider_items_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Items per page mobile",
+      "default": 1
       }
     ],
     "presets": [
