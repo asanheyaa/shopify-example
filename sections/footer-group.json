@@ -14,13 +14,49 @@
     "section_product_slider_EaCDn7": {
       "type": "section-product-slider",
       "blocks": {
-        "product_xJaJdH": {
+        "product_q7agRQ": {
           "type": "product",
           "settings": {
-            "proposal_product": "adidas-bw-army-cooc"
+            "proposal_product": "skechers-slip-ins-bobs-social-114853-burg"
           }
         },
-        "product_9GfX6c": {
+        "product_Akrhei": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "asics-gel-1130"
+          }
+        },
+        "product_3mWBww": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "on-m-cloudtilt"
+          }
+        },
+        "product_cPFhF8": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "asics-gel-nyc"
+          }
+        },
+        "product_Y6tAL8": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "nike-air-force-1-07"
+          }
+        },
+        "product_enbMia": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "nike-air-max-95-og"
+          }
+        },
+        "product_LN9NQW": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "nike-air-max-iii"
+          }
+        },
+        "product_xJaJdH": {
           "type": "product",
           "settings": {
             "proposal_product": "adidas-bw-army-cooc"
@@ -34,14 +70,18 @@
         }
       },
       "block_order": [
+        "product_q7agRQ",
+        "product_Akrhei",
+        "product_3mWBww",
+        "product_cPFhF8",
+        "product_Y6tAL8",
+        "product_enbMia",
+        "product_LN9NQW",
         "product_xJaJdH",
-        "product_9GfX6c",
         "product_C7qB6Y"
       ],
       "name": "Slider product",
-      "settings": {
-        "include_margins": true
-      }
+      "settings": {}
     },
     "footer_m9NzUG": {
       "type": "footer",
