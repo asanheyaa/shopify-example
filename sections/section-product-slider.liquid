@@ -3,7 +3,7 @@
     Using snippets
   </h2>
   <div>
-    {% render 'icons', icon: 'instagram' %}
+    {% render 'icons', icon: 'youtube' %}
   </div>
 </div>
 
@@ -30,7 +30,7 @@
                 <div class="slider-item__image">
                     {% comment %} featured_image - Головне зображення {% endcomment %}
                   <img
-                    src="{{ product.featured_image |  img_url: 'grande'}}"
+                    src="{{ product.featured_image |  image_url: width:500, height:500}}"
                     alt="{{ product.alt |  default:product.title}}"
                     width="500"
                     height="500"
