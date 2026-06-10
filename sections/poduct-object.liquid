@@ -1,19 +1,66 @@
+<div style="border: 1px solid orange; padding: 50px;">
+  <div>
+    product title - {{ product.title }}
+  </div>
+  <div>
+    product id - {{ product.id }}
+  </div>
+  <div>
+    product tags array- [{{ product.tags | join: ', ' }}]
+  </div>
+  <div>
+    product avaible boolean - {{ product.available }}
+  </div>
+  <div>
+    product featured_image object - {{ product.featured_image }}
+  </div>
+  <div>
+    product featured_image id - {{ product.featured_image.id }}
+  </div>
+  <div>
+    product variants JSON array with objects - {{ product.variants | json }}
+  </div>
+  <div>
+    product variants  size - {{ product.variants | size }}
+  </div>
+  <div>
+    product.variants[0].title == id  - { {{ product.variants[0].title }} == {{ product.variants[0].id }} }
+  </div>
+  <div>
+    {% if product.variants.size > 0 %}
+      lo
+      <ul>
+        {% for variant in product.variants %}
+          <li>
+            {{ variant.title }} == {{ variant.id }}
+            variant options:
+            <ol>
+              {% for option in variant.options %}
+                <li>
+                  {{ option }}
+                </li>
+              {% endfor %}
+            </ol>
 
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
 
 
 {% schema %}
   {
     "name": "product object",
-  "tag": "section",
-  "class": "section",
-    "settings": [
-     
-    ],
+    "tag": "section",
+    "class": "product-object-section",
+    "settings": [],
     "presets": [
       {
         "name": "product object"
       }
     ]
-   
+
   }
 {% endschema %}
