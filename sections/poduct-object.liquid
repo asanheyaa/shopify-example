@@ -1,3 +1,8 @@
+<style>
+  h2 {
+    font-size: 18px;
+  }
+</style>
 <div style="border: 1px solid orange; padding: 50px;">
   <div>
     product title - {{ product.title }}
@@ -49,16 +54,60 @@
   </div>
 </div>
 
-{% assign collection = collections[section.settings.collection] %}
-coco
+{% assign collection = section.settings.ho_1 %}
+
 {% if collection != blank %}
   <h2>
     {{ collection.title }}
   </h2>
   <div>
     Product collections count : {{ collection.all_products_count }}
+    <br>
+    Product collections products.size : {{ collection.products.size }}
+    <br>
+    <h2>
+      collection products
+    </h2>
+    {% if collection.products != blank %}
+      <h2>
+        products object
+      </h2>
+      <ul>
+        {% for product in collection.products %}
+          <li>
+            <img style="width:50px; height:50px;" src="{{ product.featured_image |  image_url: width:50, height:50}}" alt="">
+            {{ product.title }}
+            {% if product.variants.size > 0 %}
+              <h2>variants object</h2>
+              <ol>
+                {% for variant in product.variants %}
+                  <li>
+                    {{ variant.title }}
+                    {% if variant.options.size > 0 %}
+                      <h2>
+                        options object
+                      </h2>
+                      <ol>
+                        {% for option in variant.options %}
+                          <li>
+                            {% if option != '' %}
+                              {{ option }}
+                            {% endif %}
+                          </li>
+                        {% endfor %}
+                      </ol>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ol>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+
+    {% endif %}
   </div>
-  
+
 {% endif %}
 
 
@@ -71,14 +120,14 @@ coco
       {
         "type": "collection",
         "id": "ho_1",
-        "label": "collection",
+        "label": "collection"
       }
     ],
     "presets": [
-    {
-    "name": "product object"
-    
-    }
+      {
+        "name": "product object"
+
+      }
     ]
 
   }
