@@ -49,17 +49,36 @@
   </div>
 </div>
 
+{% assign collection = collections[section.settings.collection] %}
+coco
+{% if collection != blank %}
+  <h2>
+    {{ collection.title }}
+  </h2>
+  <div>
+    Product collections count : {{ collection.all_products_count }}
+  </div>
+  
+{% endif %}
+
 
 {% schema %}
   {
     "name": "product object",
     "tag": "section",
-    "class": "product-object-section",
-    "settings": [],
-    "presets": [
+    "class": "section product-object-section",
+    "settings": [
       {
-        "name": "product object"
+        "type": "collection",
+        "id": "ho_1",
+        "label": "collection",
       }
+    ],
+    "presets": [
+    {
+    "name": "product object"
+    
+    }
     ]
 
   }
