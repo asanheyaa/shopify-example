@@ -27,6 +27,10 @@
   endif
 %}
 
+{% if section.settings.text != blank %}
+<h2>{{ section.settings.text }}</h2>
+{% endif %}
+
 <comparison-slider-component
   class="comparison-slider comparison-slider--{{ block.settings.slider_style }} spacing-style size-style border-style{% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}"
   style="--ratio: {{ ratio }}; --text-background-color: {{ block.settings.text_background_color }}; --text-corner-radius: {{ block.settings.text_corner_radius }}px; {% render 'spacing-style', settings: block.settings %} {% render 'size-style', settings: block.settings %} {% render 'border-override', settings: block.settings %}"
