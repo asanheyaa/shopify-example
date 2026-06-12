@@ -1,0 +1,17 @@
+{
+	"sections": {
+		"main":{
+			"type": "main-page",
+			"settings": {
+			}
+		},
+		"richfaqtext":{
+			"type": "marquee",
+			
+		}
+	},
+	"order": [
+		"main",
+		"richfaqtext"
+	]
+}
