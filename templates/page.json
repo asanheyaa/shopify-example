@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "main": {
       "type": "main-page",
@@ -41,18 +42,52 @@
           "type": "page-content",
           "settings": {},
           "blocks": {}
+        },
+        "comparison_slider_CJL4xH": {
+          "type": "comparison-slider",
+          "name": "t:names.comparison_slider",
+          "settings": {
+            "slider_style": "horizontal",
+            "show_text": false,
+            "before_text": "",
+            "after_text": "",
+            "text_preset": "",
+            "text_position_horizontal": "start",
+            "text_position_vertical": "start",
+            "text_background": false,
+            "text_background_color": "#FFFFFF",
+            "text_corner_radius": 0,
+            "image_ratio": "adapt",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "heading",
-        "page-content"
+        "page-content",
+        "comparison_slider_CJL4xH"
       ],
       "settings": {
         "content_direction": "column",
         "gap": 32,
         "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 80
+        "padding-block-start": 100,
+        "padding-block-end": 100
       }
     }
   },
